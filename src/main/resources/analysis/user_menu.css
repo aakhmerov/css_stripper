@@ -1,0 +1,29 @@
+.user_menu .nav ul ul li.trenner div
+.user_menu .nav ul ul li.smava-privat a
+.user_menu .nav ul li.p_rel div
+.user_menu .submenu .account_settings
+.user_menu .submenu .account_logout
+.user_menu .button a
+.ie8 .user_menu .button, .ie7 .user_menu .button
+#loginbox form .form-field .form-label, #loginbox form .form-field .form-elem
+#loginbox .form-label, #loginbox .form-elem
+#loginbox .form-field .textline input
+#loginbox p
+#loginbox #loginsubmit
+#loginbox .placeholder
+.ie7 .login_box input, .ie8 .login_box input, .ie9 .login_box input
+.login_box span
+.ie7 .login_box input.button, .ie8 .login_box input.button, .ie9 .login_box input.button
+.ie9 .login_box .button, .ie8 .login_box .button
+.ie7 .login_box .button
+.signon h1, .recoveryPassword h1, .changePassword h1
+.signon .form-label, .recoveryPassword .form-label
+.signon .tab-box .box-inner, .recoveryPassword .tab-box .box-inner, .changePassword .tab-box .box-inner
+.signon input, .recoveryPassword input, .changePassword input
+.signon .signOnForm a, .recoveryPassword .recoveryPasswordForm a, .changePassword .changePasswordForm a
+.signon .recover_password
+.signon input.nextButton, .recoveryPassword input.nextButton, .changePassword input.nextButton
+.ie7 .signon input.nextButton, .ie8 .signon input.nextButton, .ie9 .signon input.nextButton, .ie7 .recoveryPassword input.nextButton, .ie8 .recoveryPassword input.nextButton, .ie9 .recoveryPassword input.nextButton, .ie7 .changePassword input.nextButton, .ie8 .changePassword input.nextButton, .ie9 .changePassword input.nextButton
+.signon input.nextButton, .recoveryPassword input.nextButton, .changePassword input.nextButton
+.ie9 .signon input.nextButton, .ie8 .signon input.nextButton, .ie9 .recoveryPassword input.nextButton, .ie8 .recoveryPassword input.nextButton, .ie9 .changePassword input.nextButton, .ie8 .changePassword input.nextButton
+.ie7 .login_box input.button, .ie7 .recoveryPassword input.button, .ie7 .changePassword input.button

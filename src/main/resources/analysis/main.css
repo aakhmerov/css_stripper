@@ -1,0 +1,21 @@
+thead th
+thead th.desc
+tbody td.bold
+tbody td.red
+tbody td.volume
+.form-input input, .form-input.textline input, .form-elem.textline input, .form-elem.select select, .form-elem.textarea textarea
+.submitbutton input
+.regFlow .submitbutton input
+.regFlow .nextButton
+.regFlow .submitbutton input.nextButton
+.regFlow .backButton
+.regFlow .submitbutton input.backButton
+input.disabled
+#loginbox .submitbutton input
+.form-field.error
+.submitbutton input
+.submitbutton a
+.form-elem.radio .radiobuttons_button
+div.box-wrapper.error
+div.box-wrapper.error ul
+span.error

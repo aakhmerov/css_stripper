@@ -1,0 +1,130 @@
+/* ################ GENERAL STUFF ################ */
+body {
+    font-size: 100%;  /* 16px */
+}
+/* ################ HEADER ################### */
+#tagline {
+    font-size: 81.25%; /*13/16*/
+    letter-spacing: 0em;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top:.1em;
+    margin-left:.1em;
+}
+/* ################ NAVIGATION ################ */
+.mainnavbar li a {
+    font-size: 75%;  /* 68.75%; 11/16*/
+}
+#primarynav li a.show_arrow {
+    padding-left: 1em;
+    background: url("/images/arrow_nav.gif") no-repeat scroll 0 transparent;
+}
+#primarynav li a {
+	font-size: 1.1em;  /*75%; 12/16*/
+	padding-top: 0.1em;
+	padding-left: 0.1em;
+}
+#primarynav li span.nav_additional_title a {
+	font-weight: lighter;
+}
+#primarynav li.active-entry a.show_arrow {
+	background: url("/images/arrow_nav_active.gif") no-repeat scroll 0 transparent;
+}
+#tertiarynav li a {
+    font-weight: normal;
+}
+/* ################ COLUMNS ################ */
+.block {
+    font-size: 62.5%; /* 10/16 */
+}
+.column p {
+    font-size: 120%; /* 12/10 */
+}
+.column dl {
+    font-size: 110%; /* 11/10 */
+}
+.column ul, .box-wrapper ul {
+	font-size: 120%; /* 11/10 */
+}
+.column ul.tabnav, .column ul.horizontal {
+/*	font-size: 110%;*/ /* 11/10 */
+}
+.column ul ul, .box-wrapper ul ul {
+	font-size: 100%; /* 11/11 */
+}
+/* ################ HEADLINES ################ */
+h1 {
+	font-size: 200%; /* 24/10 */
+    margin: 0 0 .5em 0; /* 0 0 10 0/10 */
+}
+h2 {
+    font-size: 120%; /* 12/10 */
+    font-weight: bold;
+    margin-top: 1em;
+}
+h3 {
+    font-size: 120%; /* 12/10 */
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+h4,
+h5 {
+	font-size: 120%; /* 12/10 */
+    font-weight: bold;
+}
+/* ################ TABLE ################ */
+table {
+	font-size: 110%; /* 11/10 */
+}
+table table {
+	font-size: 100%; /* 11/11 */
+}
+table .submitbutton {
+	font-size: 91.9%; /* 10/11 */
+}
+
+table tr.highlight td,
+table td.highlight {
+    font-size: 100%; /* 10/10 */
+}
+/* ################ FORMS ################ */
+form .form-field .form-label,
+form .form-field .form-elem  {
+    font-size: 120%; /* 11/10 */
+}
+form .form-field .form-elem.readonly {
+    font-size: 120%; /* 11/10 */
+}
+form .form-submit input {
+    font-size: 120%;  /* 12/10 */
+}
+form input,
+form textarea,
+form select {
+    font-size: 100%;  /* 11/11 - needed for IE */
+}
+/* ################ ERROR ################ */
+div.box-wrapper.error {
+    font-size: 100; /* 11/11 */
+}
+/* ################ MISC STUFF ################ */
+#tooltip-text,
+#tooltip-shadow-text {
+    font-size: 62.5%; /* 10/16 */
+}
+.edit-link {
+    font-size: 120%; /* 12/10 */
+}
+table.vertraulichkeitsvereinbarung {
+    font-size: 110%; /* 11/10 */
+}
+.big {
+	font-size: 140% !important;
+}
+.small {
+	font-size: 110% !important;
+}
+.important-description {
+	color: #CC0000;
+	font-weight:bold;
+}

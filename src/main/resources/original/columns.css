@@ -1,0 +1,43 @@
+/* ################ COLUMNS ################ */
+.column {
+    float: left; /* */
+    margin-bottom: 1em; /* 10/10 */
+    margin-right: 2em /* 20/10 */
+}
+.columnXS {
+	width: 18em;
+}
+.columnS {
+    float: right;
+    width: 32.5em; /* 325/10 */
+	margin-right: 4.5em;
+}
+.columnSRegflow {
+    float: right;
+    width: 17.5em; /* 325/10 */
+	margin-right: 4.5em;
+}
+.columnM {
+    width: 34.3em; /* 343/10 */
+}
+.columnL {
+    width: 52.3em; /* 523/10 */
+}
+.columnML {
+    width: 62.3em; /* 523/10 */
+}
+.columnXL {
+    width: 72.3em; /* 723/10 */
+}
+.columnXML {
+    width: 78em; /* 723/10 */
+}
+.columnXXL {
+    width: 98em; /* 980/10 */
+    /* background-color: blue; */
+}
+.columnMarginal {
+    width: 20em; /* 200/10 */
+    float: right;
+    margin-right: 77px;
+}

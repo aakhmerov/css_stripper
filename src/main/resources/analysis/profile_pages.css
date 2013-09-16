@@ -1,0 +1,36 @@
+#profile dl, #profile ul
+#profile dl
+#profile h1
+#profile h3
+#profile .profile-wrapper h3
+#profile .profile-wrapper img
+#profile .profile-wrapper div
+#profile .profile-wrapper dl dd
+#profile .profile-wrapper dl dt
+#profile .profile-wrapper .rating
+#profile .profile-wrapper .rating b
+#profile #offer-conditions dd
+#offer-history .section dl dd
+#profile #offer-conditions dd.odd, #offer-history .section dl dd.odd
+#profile #offer-conditions dd span, #offer-history .section dl dd span
+#profile #offer-conditions dd span
+#profile #offer-conditions dd span span, #offer-history .section dl dd span span
+#profile-nav li
+#profile form fieldset
+#profile form p
+#profile form p input, #profile form p select
+#profile h3 .info
+.progress
+#profile .progress
+.progress .filled-part, .progress open-part
+.progress .filled-part.bg
+.progress .open-part.bg
+.progress .content
+#offer-history .section
+#offer-history .section img
+#offer-history .section
+.expired
+.disclaimer
+#borrowerbox, #ratingbox
+#ratingbox h5 span, #borrowerbox h5 span
+#ratingbox .box-wrapper, #borrowerbox .box-wrapper

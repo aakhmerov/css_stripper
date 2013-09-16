@@ -1,0 +1,557 @@
+/* ##### user menu ############################################################################## */
+
+
+#header .inner .user_menu {
+	font-family: 'PT sans';
+	float: right;
+	margin-top: 35px;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.user_menu .nav ul {
+	margin:0px;
+ 	padding:0px;
+	list-style: none;
+	list-style-image:none;
+	/*position: relative;*/
+	display: block;
+}
+
+.user_menu .nav ul:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+.user_menu .nav ul li {
+	float: left;
+	z-index:500;
+}
+
+.user_menu .nav ul .p_rel {
+	position: relative;
+	border-top: 1px solid #FFF;
+	border-left: 1px solid #FFF;
+	border-right: 1px solid #FFF;
+	border-bottom: 1px solid #FFF;
+	width: 20px;
+	height: 25px;
+	margin-right: 5px;
+	z-index: 100;
+}
+
+.user_menu .nav ul li.login div.log_on,
+.user_menu .nav ul li.mail div.mail_account {
+	float: left;
+}
+
+.user_menu .nav ul li.login .p_rel_active,
+.user_menu .nav ul li.mail:hover .p_rel {
+	border-top: 1px solid #C6C6C6;
+	border-left: 1px solid #C6C6C6;
+	border-right: 1px solid #C6C6C6;
+}
+
+.user_menu .nav ul li.mail:hover ul {
+	display: block;
+}
+
+.user_menu .nav ul li.pipe {
+	border-left: 1px solid #C6C6C6;
+}
+
+.user_menu .nav ul li.first a,
+.user_menu .nav ul li.pipe a {
+	margin: 0 5px;
+}
+
+.user_menu .nav ul li.last a {
+	margin-right: 0;
+}
+
+.user_menu .nav ul li a {
+	display: block;
+	padding: 5px 5px;
+	color: #000;
+	text-decoration: none;
+	font-size: 13px;
+}
+
+.user_menu .nav ul li a:hover {
+	text-decoration: underline;
+}
+
+.user_menu .nav ul ul {
+	display: none;
+	background: #FFF;
+	float: none;
+	position: absolute;
+	top: 25px;
+	left: -141px;
+	width:160px;
+	border-left: 1px solid #C6C6C6;
+	border-right: 1px solid #C6C6C6;
+	border-bottom: 1px solid #C6C6C6;
+	border-bottom-right-radius:3px;
+	border-bottom-left-radius:3px;
+}
+
+.user_menu .nav ul li.login ul {
+	width: 170px;
+	left: -151px;
+}
+
+.user_menu .nav ul ul li {
+	float: none;
+	position: relative;
+	padding: 5px 0;
+
+}
+
+.user_menu .nav ul li.login ul li {
+	position: static;
+	padding: 0;
+}
+
+.user_menu .nav ul ul li a:hover {
+	background-color: #CCC;
+}
+
+.user_menu .nav ul ul li div.btop {
+    border-top: 1px solid #C6C6C6;
+    height: 1px;
+    margin-top: 20px;
+    width: 140px;
+	position: absolute;
+	top: -20px;
+}
+
+.user_menu .nav ul li.login ul li div.btop {
+	width: 150px;
+}
+
+.user_menu .nav ul ul li.trenner div {
+    border-top: 1px solid #C6C6C6;
+    height: 1px;
+    width: 90%;
+	position: absolute;
+	left: 10px;
+}
+
+.user_menu .nav ul ul li.trenner:hover {
+	background-color: #FFF;
+}
+
+.user_menu .nav ul ul li.submenu a {
+	padding: 7px 0px 7px 30px;
+}
+
+.user_menu .nav ul ul li.submenu .recover_password a {
+    display: inline;
+    font-size: 10px;
+    margin-left: 65px;
+    padding: 0;
+    text-align: right;
+    width: 100%;
+}
+
+.user_menu .nav ul ul li.submenu .recover_password a {
+	background-color: #FFF;
+}
+
+.user_menu .nav ul ul li.smava-privat a {
+	padding: 7px 0px 7px 15px;
+}
+
+.user_menu .nav ul li.p_rel div {
+	height: 20px;
+}
+
+.user_menu .nav ul ul li:last-child {
+	margin-bottom: 10px;
+}
+
+.user_menu .account {
+	background-image: url(/images/sprite.png);
+	background-position:0px -1300px;
+	background-repeat: no-repeat;
+	width: 10px;
+	height: 10px !important;
+	margin: 10px 0 0 5px;
+	cursor: pointer;
+}
+
+.user_menu .submenu .account_settings {
+	background-image: url(/images/sprite.png);
+	background-position:10px -1307px;
+	background-repeat: no-repeat;
+	display: block;
+	padding: 7px 0px 7px 30px ;
+}
+
+.user_menu .submenu .account_logout {
+	background-image: url(/images/sprite.png);
+	background-position:10px -1334px;
+	background-repeat: no-repeat;
+	display: block;
+}
+
+
+
+.user_menu .button {
+	border-top-left-radius:3px;
+	border-top-right-radius:3px;
+	border-bottom-right-radius:3px;
+	border-bottom-left-radius:3px;
+
+	background: #FCCE48;
+	background: linear-gradient(top, #FCCE48, #EEA11A);
+	background: -moz-linear-gradient(top, #FCCE48, #EEA11A);
+	background: -webkit-gradient(linear, left top, left bottom, from(#FCCE48), to(#EEA11A));
+	background: -webkit-linear-gradient(top, #FCCE48, #EEA11A);
+	background: -o-linear-gradient(top, #FCCE48, #EEA11A);
+	background: -ms-linear-gradient(top, #FCCE48, #EEA11A);
+
+	box-shadow:2px 2px 0 -1px #BF7200;
+	-webkit-box-shadow: 2px 2px 0 -1px #BF7200;
+	-moz-box-shadow: 2px 2px 0 -1px #BF7200;
+	margin-left: 10px;
+}
+
+.user_menu .login_box .button {
+	margin-left: 78px;
+    width: 70px;
+}
+
+.user_menu .button a {
+	color: #7F3300 !important;
+	text-decoration: none;
+	padding: 4px;
+	font-size: 10px;
+}
+
+.ie8 .user_menu .button,
+.ie7 .user_menu .button {
+	border: 1px solid #7F3300;
+}
+
+.user_menu .button a:hover {
+	color: #3F1700;
+	text-decoration: none !important;
+}
+
+.user_menu .button:hover {
+	background: #BF7200;
+	background: linear-gradient(top, #BF7200, #EEA11A);
+	background: -moz-linear-gradient(top, #BF7200, #EEA11A);
+	background: -webkit-gradient(linear, left top, left bottom, from(#BF7200), to(#EEA11A));
+	background: -webkit-linear-gradient(top, #BF7200, #EEA11A);
+	background: -o-linear-gradient(top, #BF7200, #EEA11A);
+	background: -ms-linear-gradient(top, #BF7200, #EEA11A);
+
+	box-shadow:2px -1px 0 -1px #EAC386;
+	-webkit-box-shadow: 2px -1px 0 -1px #EAC386;
+	-moz-box-shadow: 2px -1px 0 -1px #EAC386;
+}
+
+/* ############# USER MENU ########################### */
+/* ############# LOGIN-BOX ########################### */
+
+#loginbox {
+	float:right;
+	/*width: 34.1em;*/
+	padding: 0;
+	font-size: 62.5%;
+	margin-top: 2em;
+}
+
+.login_box {
+	margin-top: 0 !important;
+}
+
+#loginbox form .form-field .form-label,
+#loginbox form .form-field .form-elem  {
+    font-size: 110%; /* 11/10 */
+}
+#loginbox .form-label, #loginbox .form-elem {
+	margin:.1em; padding:0;
+	clear: none;
+	width: 10em;
+}
+#loginbox .form-field {
+	clear:none;
+	margin: 10px 10px 0;
+	padding:0;
+	width: 17em;
+	float: left;
+}
+
+#loginbox .form-submit {
+	clear:none; margin:10px; padding:0;
+	width: 7em;
+	float: left;
+}
+
+#loginbox .form-field .textline input {
+	width: 10em;
+}
+#loginbox p {
+	font-size: 110%;
+	float: right;
+	margin-left: 1em;
+}
+#loginbox a {
+	color: #999;
+	font-weight: normal;
+}
+
+#loginbox .recover_password {
+	margin: 5px 5px 5px 5px;
+}
+
+#loginbox #loginsubmit {
+	margin-top: 10px;
+	/*margin-left: .5em;*/
+	float:left;
+	margin-left: 5px;
+}
+
+#loginbox .placeholder {
+	color: #aaa;
+}
+
+.login_box input{
+
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+	     -o-border-radius: 3px;
+	        border-radius: 3px;
+	border: 1px solid #D2D2D2;
+	width: 100%;
+	padding: 4px 0 4px 10px ;
+	font-size: 12px;
+	outline: none;
+	height: 14px;
+}
+
+.ie7 .login_box input,
+.ie8 .login_box input,
+.ie9 .login_box input {
+	height: 16px;
+}
+
+
+.login_box span {
+	margin: 5px;
+}
+
+.login_box input.button {
+	padding: 0;
+	color: #7F3300;
+	font-weight: bold;
+	font-size: 10px;
+	cursor: pointer;
+}
+
+.ie7 .login_box input.button,
+.ie8 .login_box input.button,
+.ie9 .login_box input.button {
+	height: 25px;
+}
+
+.login_box input.button:hover {
+	color: #3F1700;
+}
+
+.login_box .button {
+	border-top-left-radius:3px;
+	border-top-right-radius:3px;
+	border-bottom-right-radius:3px;
+	border-bottom-left-radius:3px;
+	border-color: #FCCE48;
+
+	background: #FCCE48;
+	background: linear-gradient(top, #FCCE48, #EEA11A);
+	background: -moz-linear-gradient(top, #FCCE48, #EEA11A);
+	background: -webkit-gradient(linear, left top, left bottom, from(#FCCE48), to(#EEA11A));
+	background: -webkit-linear-gradient(top, #FCCE48, #EEA11A);
+	background: -o-linear-gradient(top, #FCCE48, #EEA11A);
+	background: -ms-linear-gradient(top, #FCCE48, #EEA11A);
+
+	box-shadow:2px 2px 0 -1px #BF7200;
+	-webkit-box-shadow: 2px 2px 0 -1px #BF7200;
+	-moz-box-shadow: 2px 2px 0 -1px #BF7200;
+	padding-right:5px;
+	height: 21px;
+}
+
+/* --- IE Workaround ------------- */
+.ie9 .login_box .button,
+.ie8 .login_box .button {
+	border: 1px solid #BF7200;
+	background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAArCAYAAAC91zLkAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3AkbCx0UysOTmwAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAR0lEQVQoz2P8c87jPwMUMDEgAdwcFob//xGc/8gcBuI4/xlQZFCM/odsNAPpRlNVGQOyQ///wyVDeYDgDAOU0CHLcwxUDBAAYJlUYR89S5AAAAAASUVORK5CYII=);
+}
+
+.ie7 .login_box .button{
+	border: 1px solid #BF7200;
+	background-image:url(/images/forward.png);
+}
+
+
+/* --- hover ------------- */
+.login_box .button:hover {
+	background: #BF7200;
+	background: linear-gradient(top, #BF7200, #EEA11A);
+	background: -moz-linear-gradient(top, #BF7200, #EEA11A);
+	background: -webkit-gradient(linear, left top, left bottom, from(#BF7200), to(#EEA11A));
+	background: -webkit-linear-gradient(top, #BF7200, #EEA11A);
+	background: -o-linear-gradient(top, #BF7200, #EEA11A);
+	background: -ms-linear-gradient(top, #BF7200, #EEA11A);
+
+	box-shadow:2px -1px 0 -1px #EAC386;
+	-webkit-box-shadow: 2px -1px 0 -1px #EAC386;
+	-moz-box-shadow: 2px -1px 0 -1px #EAC386;
+}
+
+
+/* ###### signon , recovery password ################################################################################################## */
+.signon h1,
+.recoveryPassword h1,
+.changePassword h1 {
+	color: #333;
+	font-size: 18px !important;
+}
+
+.signon .form-label,
+.recoveryPassword .form-label {
+	margin-top: 5px;
+}
+
+
+.signon .tab-box .box-inner,
+.recoveryPassword .tab-box .box-inner,
+.changePassword .tab-box .box-inner {
+	background-color: #F9F9F9;
+	border: 1px solid #C6C6C6;
+    border-radius: 3px 3px 3px 3px;
+}
+
+.signon input,
+.recoveryPassword input,
+.changePassword input {
+	border: 1px solid #D2D2D2 !important;
+    border-radius: 3px 3px 3px 3px;
+    font-size: 100%;
+    height: 18px;
+    outline: medium none;
+    padding: 8px 0 6px 10px !important;
+    width: 80%;
+}
+
+.signon .signOnForm a,
+.recoveryPassword .recoveryPasswordForm a,
+.changePassword .changePasswordForm a {
+	color: #999999;
+    font-weight: normal;
+}
+
+.signon .recover_password {
+	margin-left: 17em;
+	display: block;
+}
+
+.signon input.nextButton,
+.recoveryPassword input.nextButton,
+.changePassword input.nextButton {
+	padding: 0;
+	color: #7F3300;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+.ie7 .signon input.nextButton,
+.ie8 .signon input.nextButton,
+.ie9 .signon input.nextButton,
+.ie7 .recoveryPassword input.nextButton,
+.ie8 .recoveryPassword input.nextButton,
+.ie9 .recoveryPassword input.nextButton,
+.ie7 .changePassword input.nextButton,
+.ie8 .changePassword input.nextButton,
+.ie9 .changePassword input.nextButton
+ {
+	height: 25px;
+	/*padding-right:20px;*/
+	padding: 0 10px;
+}
+
+/*
+.signon input.nextButton:hover,
+.recoveryPassword input.nextButton:hover {
+	color: #3F1700;
+}
+*/
+
+.signon input.nextButton,
+.recoveryPassword input.nextButton,
+.changePassword input.nextButton {
+	border-top-left-radius:3px;
+	border-top-right-radius:3px;
+	border-bottom-right-radius:3px;
+	border-bottom-left-radius:3px;
+	border-color: #FCCE48 !important;
+
+	background: #FCCE48;
+	background: linear-gradient(top, #FCCE48, #EEA11A);
+	background: -moz-linear-gradient(top, #FCCE48, #EEA11A);
+	background: -webkit-gradient(linear, left top, left bottom, from(#FCCE48), to(#EEA11A));
+	background: -webkit-linear-gradient(top, #FCCE48, #EEA11A);
+	background: -o-linear-gradient(top, #FCCE48, #EEA11A);
+	background: -ms-linear-gradient(top, #FCCE48, #EEA11A);
+
+	box-shadow:2px 2px 0 -1px #BF7200;
+	-webkit-box-shadow: 2px 2px 0 -1px #BF7200;
+	-moz-box-shadow: 2px 2px 0 -1px #BF7200;
+	margin:0 10px;
+	height: 21px;
+	font-size: 12px;
+	padding: 0 !important;
+}
+
+/* --- IE Workaround ------------- */
+.ie9 .signon input.nextButton,
+.ie8 .signon input.nextButton,
+.ie9 .recoveryPassword input.nextButton,
+.ie8 .recoveryPassword input.nextButton,
+.ie9 .changePassword input.nextButton,
+.ie8 .changePassword input.nextButton {
+	border: 1px solid #BF7200;
+	background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAArCAYAAAC91zLkAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3AkbCx0UysOTmwAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAR0lEQVQoz2P8c87jPwMUMDEgAdwcFob//xGc/8gcBuI4/xlQZFCM/odsNAPpRlNVGQOyQ///wyVDeYDgDAOU0CHLcwxUDBAAYJlUYR89S5AAAAAASUVORK5CYII=);
+	padding: 0 !important;
+}
+
+.ie7 .login_box input.button,
+.ie7 .recoveryPassword input.button,
+.ie7 .changePassword input.button {
+	border: 1px solid #BF7200;
+	background-image:url(/images/forward.png);
+}
+
+
+/* --- hover ------------- */
+.signon input.nextButton:hover,
+.recoveryPassword input.nextButton:hover,
+.changePassword input.nextButton:hover {
+	background: #BF7200;
+	background: linear-gradient(top, #BF7200, #EEA11A);
+	background: -moz-linear-gradient(top, #BF7200, #EEA11A);
+	background: -webkit-gradient(linear, left top, left bottom, from(#BF7200), to(#EEA11A));
+	background: -webkit-linear-gradient(top, #BF7200, #EEA11A);
+	background: -o-linear-gradient(top, #BF7200, #EEA11A);
+	background: -ms-linear-gradient(top, #BF7200, #EEA11A);
+
+	box-shadow:2px -1px 0 -1px #EAC386;
+	-webkit-box-shadow: 2px -1px 0 -1px #EAC386;
+	-moz-box-shadow: 2px -1px 0 -1px #EAC386;
+	color: #3F1700;
+}

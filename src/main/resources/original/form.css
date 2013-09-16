@@ -1,0 +1,330 @@
+/* ################ form ################ */
+form {
+	padding: 0;
+	margin: 0;
+}
+form h2 {
+	margin-bottom: 1em; /* 15/10 */
+	margin-top: .5em;
+}
+form p {
+	padding-bottom: 1em; /* 10/10 */
+}
+/* ################  FIELDSET ################ */
+form fieldset {
+	/*height: 100%;*/
+	padding: .5em 0; /* 10 0/10*/
+}
+.box-wrapper fieldset {
+	border-bottom: 2px solid #f3f3f3;
+}
+.tab-box fieldset {
+	border-bottom: 0;
+}
+form fieldset.last {
+	border: 0 solid transparent; /* 'none' doesn't work with opera */
+}
+/* ################ form in a paragraph? ################ */
+form fieldset p {
+    display: block;
+}
+form fieldset p .form-label {
+    display: block;
+    float: left;
+    width: 30%;
+    clear: both;
+}
+form fieldset p .form-label em {
+    font-style: normal;
+}
+form fieldset p .form-input {
+    display: block;
+    float: left;
+    width: 69%;
+}
+form fieldset p .form-input .radio {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+form fieldset p .form-input label {
+    margin-right: 1.5em; /* 15/10 */
+}
+/* ################ form-field ################ */
+form .form-field {
+    padding:  .5em 0 .5em 0; /* 5 0/10 */
+    padding-right: .5em; /* 5/10 */
+    clear:both;
+    background-color: none;
+}
+/* ################ form-field form-label ################ */
+form .form-field .form-label {
+    float: left;
+	width: 12em;
+	height: 100%;
+	padding-top: .3em; /* 3/10 */
+	padding-right: 1em; /* 15/10 */
+	padding-bottom: .5em;
+	margin-right: .5em;
+}
+form .form-field .form-label label {
+    display: block;
+    /*padding:  0 .9375em;*/ /* 0 15px/16p */
+}
+/* modifications for different column sizes */
+.columnM .form-field .form-label {
+	width: 12em;
+}
+.columnL form .form-field .form-label {
+	width: 12em;
+}
+.columnL form .edit_message .form-field .form-label,
+.columnML form .edit_message .form-field .form-label {
+	width: 5em;
+}
+.columnXL form .form-field .form-label {
+	width: 12em;
+}
+/* ################ form-field form-elem ################ */
+/* new for new borrower process*/
+.columnL form .form-field .form-elem,
+.columnML form .form-field .form-elem {
+	width: 20em;
+	float: left;
+}
+.columnL form .edit_message .form-field .form-elem,
+.columnML form .edit_message .form-field .form-elem {
+	width: 35em;
+}
+.columnXL form .form-field .form-elem,
+.columnXML form .form-field .form-elem {
+	width: 20em;
+	float: left;
+}
+form .credit_worthiness_shared_left .form-field .form-elem,
+form .credit_worthiness_shared_right .form-field .form-elem {
+	width: 14em;
+}
+
+form .credit_worthiness_shared_left .form-elem.select select,
+form .credit_worthiness_shared_left .form-elem.textline select,
+form .credit_worthiness_shared_right .form-elem.select select,
+form .credit_worthiness_shared_right .form-elem.textline select {
+	width: 13em;
+}
+
+#form-field-text .form-elem,
+#form-field-kindOfUser .form-elem,
+.columnXML form .form-field  .form-elem-bankaccount {
+	width: 27em;
+	float: left;
+}
+
+#annex_brokerage_agreement,
+#annex_brokerage_schufa,
+#annex_schufa {
+	margin-left: 2.5em;
+	margin-bottom: 1.5em;
+	margin-top: -1.5em;
+	width: 60em;
+	float: left;
+}
+
+#annex_term_and_cond,
+#annex_term_and_cond_applied,
+#annex_privacy,
+#annex_fidor_term_and_cond {
+	margin-left: 1.5em;
+	margin-top: -1.5em;
+	width: 24.7em;
+	float: left;
+}
+
+#annex_term_and_cond {
+	margin-bottom: 1.5em;
+}
+
+.mini_account #annex_term_and_cond,
+.mini_account #annex_privacy {
+	width: 40em;
+	margin-bottom: 1.5em;
+}
+
+.number_of_borrowers_style {
+	text-align: center;
+	font-weight: bold;
+	color: gray;
+	font-size: 120%;
+	display: none;
+}
+
+form .form-field .form-desc {
+	float: left;
+	width: 5%;
+}
+
+form .form-field .form-elem.select select {
+	margin-right:.3em;
+	min-width: 4em;
+	/*width: 17em;*/
+}
+form .form-field .form-elem.textline input {
+	/*width: 17em;*/ /* 154/11 */
+	margin-right:.3em;
+}
+form .form-field .form-elem.textarea textarea {
+	width: 27em; /* 319/11 */
+}
+form .form-field .form-elem.radio input {
+	width: 2em;
+}
+form .form-field .form-elem.select select.wide {
+	width: 15.4545em; /* 170/11 */
+}
+form .form-field .form-elem.select select.wide-third {
+	width: 5em; /* third of (width of 'select.wide' minus 2 times margin-right of 'ul.horizontal li') */
+}
+form .form-field .form-elem.select select.larger-select,
+form .form-field .form-elem.textline input.larger-select {
+	width: 22.5em;
+}
+form .form-field .form-elem.checkbox ul,
+form .form-field .form-elem.radio ul {
+	margin: 0;
+}
+form .form-field .form-elem.checkbox ul li,
+form .form-field .form-elem.radio ul li {
+	height: 2em;
+	line-height: 2em;
+}
+form .form-field .form-elem.checkbox ul li *,
+form .form-field .form-elem.radio ul li * {
+	vertical-align: middle;
+}
+/* ddoubleday: TODO: why does margin-left */
+form .form-field .form-elem.textline ul.horizontal {
+	font-size:100%;
+}
+form .form-field .form-elem.textline ul.horizontal li {
+    float: left;
+	margin-right: .5em;
+}
+
+.occupation form .form-field .form-elem.textline span {
+	margin-left: 3px;
+	margin-right: 10px;
+}
+
+/* ################ form-field annex ################ */
+form .form-field .annex {
+	position: relative;
+	top: -.1em;
+	left: 1em;
+}
+form .form-field .checkbox .annex {
+	top: 1em;
+}
+/* ################ form-field error ################ */
+form .form-field.error {
+    color: #c00;
+}
+div.box-wrapper.formfield.error {
+    background: none;
+}
+form .form-field.error p,
+form .form-field.error .form-label,
+form .form-field.error .annex,
+form .form-field.error .prefix {
+	color: #c00 !important;
+}
+form .form-field.error p {
+	padding-bottom: .4em; /* 4/10 */
+	color: #c00;
+	font-weight: bold;
+}
+/* ################ form-submit ################ */
+form .form-field .form-submit {
+	padding-left: 48%;
+}
+.columnL form .form-field .form-submit {
+	padding-left: 33%;
+}
+ul.horizontal li {
+    float: left;
+	padding-right: 1em;
+}
+.form-submit ul.horizontal {
+	width: 100%;
+}
+.form-submit ul.horizontal li {
+    float: right;
+	padding-left: 1em;
+	padding-right: 0;
+}
+.box-wrapper .form-submit ul.horizontal li {
+    float: left;
+	padding-right: 1em;
+	padding-left: 0;
+}
+.form-submit ul.horizontal li.doFloatRight {
+	float: right;
+}
+.submitbutton {
+    /*position: relative; */
+	display: block;
+    margin-left: 0;  /* notwendig im IE  */
+}
+.submitbutton input,
+.submitbutton a,
+.marketingaction-button a {
+    margin: 0;
+    padding: 0 1em;
+    height: 2.0909em;  /* 23/11 */
+}
+.form-submit ul {
+    float: left;
+}
+/* ################ helpers ################ */
+#form-field-creditWorthinessForm-sectorLevel1 {
+    display: none;
+}
+#form-field-creditWorthinessForm-sectorLevel2 {
+    display: none;
+}
+#form-field-creditWorthinessForm-sectorLevel3 {
+    display: none;
+}
+/* ### freelancer income form results ### */
+#freelancerIncomeForm11Result,
+#freelancerIncomeForm12Result,
+#freelancerIncomeForm13Result,
+#freelancerIncomeForm14Result {
+    width: 18em;
+    float: left;
+    clear:none;
+    margin-top: 3em;
+}
+#freelancerIncomeForm11Result p,
+#freelancerIncomeForm12Result p,
+#freelancerIncomeForm13Result p,
+#freelancerIncomeForm14Result p {
+	padding-bottom: .5em;
+	font-size: 110%;
+}
+#form-field-orderForm-title div.textline input,
+#form-field-orderForm-description textarea {
+	width: 33em;
+}
+#form-field-userDataForm-username div.textline input,
+#form-field-orderForm-mainCategory div.select select {
+	width: 17em;
+}
+#form-field-userDataForm-username input {
+	background-color: #D7E3EB;
+}
+.automaticOrderDetails {
+	background-color: #D7E3EB;
+}
+
+#form-field-userDataForm-username input.lenderUsername {
+	background-color: white;
+}

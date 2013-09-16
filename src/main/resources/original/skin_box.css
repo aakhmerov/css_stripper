@@ -1,0 +1,71 @@
+/* ################ BOX header fonts ################ */
+h5 span {
+    color: #fff;
+    background-color: #999999;
+    padding-left: 1em; /* 10/10 */
+    padding-right: 1em; /* 10/10 */
+    padding-top: 0.2em; /* 2/10 */
+}
+.columnS h5 span {
+    color: #7d7d7d;
+    background-color: #e3e3e3;
+}
+h5 span.highlight {
+	background-color: #9ee44e;
+	color: #333333;
+}
+h5 span.toggleview {
+	background-color: #9ee44e;
+	color: #333333;
+}
+h5 span.red {
+	background-color: #c00;
+}
+/* ################ BOX backgrounds ################ */
+.block {
+    color: #333333;
+}
+.box-wrapper {
+    border: 1px solid #999999;
+	background-color: #f3f3f3;
+	background-image: none;
+}
+.columnS .box-wrapper {
+    border: 1px solid #e3e3e3;
+}
+.box-wrapper .box-inner {
+	border-top: 1px solid #fff;
+}
+#loginbox .box-inner,
+#creditbox .box-inner,
+#categorybox .box-inner,
+#categories-box .box-inner,
+#market-ticker .box-inner,
+#project_preview .box-inner,
+#faq .box-inner,
+#conditionsbox .box-inner,
+#howsmavaworks,
+div.box-wrapper.error {
+	background: /*transparent*/ url(/images/verlauf_150.jpg) repeat-x center top #E3E3E3;
+/*  background-color: #E3E3E3; */
+}
+.columnS .box-wrapper.highlight {
+    border: 1px solid #9ee44e;
+}
+.box-wrapper.tab-box {
+	border: none;
+}
+.tab-box .box-inner {
+	background-color: #EEEEEE;
+}
+.tab-box.registration .box-inner {
+	background-color: #F7F7F7;
+}
+.registration_component {
+	background-color: #EEEEEE;
+	padding: 1em 2em;
+}
+
+#sharedLoanFields .registration_component {
+	padding:0;
+}

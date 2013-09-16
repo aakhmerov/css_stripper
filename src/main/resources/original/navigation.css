@@ -1,0 +1,143 @@
+/* ################ NAVIGATION ################ */
+/* whole navigation block */
+#headnav {
+    margin-bottom: 1.2500em; /* 20/16 */
+    margin-top:0.7em;
+}
+#primarynav li.two_tabs {
+	width: 45.7%;
+	list-style-image:url("/images/arrow_nav.gif");
+}
+#primarynav li.three_tabs {
+	width: 29.25%;
+}
+#primarynav,
+#secondarynav,
+#tertiarynav,
+#footer {
+    width: 61.25em; /* 980/16 */
+    margin-left: 0em;  /* 0/16 */
+}
+.mainnavbar {
+    position: relative;
+    z-index: 50;
+}
+.mainnavbar .inner {
+	 height: 2.25em; /* 36 / 16 */ /* 2.8125em;  45/16 */
+}
+.mainnavbar ul {
+    position: absolute;
+    margin: -2.25em 0.75em 0; /* -1.6875em 0.75em 0; -27 12 0/16 */
+    clear: both;
+    width: 61.25em; /* 45.1875em; 723/16 */
+	height: 2.625em; /* 1.6875em;  27/16 */
+}
+.mainnavbar li {
+    display: block;
+    float: left;
+    height: 2.1em; /* 1.5625em 25/16 */
+    padding-top: 0.1250em; /* 2/16 */
+}
+.mainnavbar li a {
+    text-align: center;
+    /*line-height: 2em;  22/11 */
+}
+#primarynav ul {
+    width: 61.25em; /* 980/16 */
+    padding-left: 0em; /* 0/16 */
+    margin: -2.625em 0.75em 0;
+}
+#primarynav li {
+    /* margin-right: 0.3125em; 5/16 */
+    padding-left: 1.1250em;  /* 0 18/16 */
+    padding-right: 1.1250em; /* 0 18/16 */
+    padding-top: 0.5em;
+}
+#primarynav li a {
+    padding: 0em 0em; /* 4/16 */
+    /* line-height: 2.0833em;  25/12 */
+    text-decoration: none;
+}
+#secondarynav ul,
+#tertiarynav ul {
+    margin-left: 10px !important;
+}
+#secondarynav li,
+#tertiarynav li {
+    padding: 0.5em 0.6250em; /* 2 10/16 */
+}
+#secondarynav li a {
+    height: 100%;
+}
+#secondarynav li a span {
+    padding: 0em; /* 0/16 */
+    height: 100%;
+}
+#primarynav li.active-entry a,
+#secondarynav li.active-entry a,
+#tertiarynav li.active-entry a {
+    margin-top: 0.1875em; /* 3/16 */
+    height: 100%;
+}
+#secondarynav .vertikal_green_divider,
+#tertiarynav .vertikal_green_divider {
+	background-image: url(/images/vertikal_green_divider.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin-top: -0.3em;
+}
+
+#stats_navi #left_box {
+	float: left;
+}
+#stats_navi #right_box {
+	float: right;
+}
+#stats_navi .navi_box {
+	background-color: #F3F3F3;
+	border-color: #999999;
+	width: 32.5em;
+	padding: 1em;
+}
+#stats_navi #title {
+	color: #666666;
+	font-size: 140%;
+	font-weight: bold;
+}
+#stats_navi #options {
+	margin-top: 1em;
+}
+#stats_navi ul {
+	list-style-image: url(/images/grey-arrow.gif);
+	list-style-position: outside;
+	list-style-type: none;
+}
+#stats_navi .active {
+	text-decoration: none;
+	color: #000000;
+}
+
+
+/* ################ TABBED NAVIGATION ################ */
+.tabnav {
+    padding: 1em 0 0 0;
+    margin: 0 0 0 0;
+    list-style: none;
+    height: 3.5em;
+}
+.tabnav li {
+    float: left;
+    position: relative;
+    margin-right: 2px;
+	margin-bottom: -1px;
+    z-Index: 5000;
+    max-width:9.5em;
+    height: 100%;
+}
+.tabnav li span span {
+    display: block;
+    padding: 4px 8px;
+    font-weight: bold;
+    font-size: 110%; /* 11/10 */
+
+}

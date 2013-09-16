@@ -1,0 +1,111 @@
+/* ################ TABLE ################ */
+table {
+    border: 1px #999999 solid;
+}
+thead th {
+	border-top: 1px #fff solid;
+	border-bottom: 1px #999999 solid;
+    background: #d4d4d4 url(/images/verlauf_dunkle_50.jpg) repeat-x center top;
+}
+thead th.desc {
+    font-weight: normal;
+}
+tbody td {
+	background-color: #F3F3F3;
+	border-top: 1px #fff solid;
+	border-bottom: 1px #fff solid;
+}
+tbody td.bold {
+    font-weight:bold;
+}
+tbody td.red {
+    color:red;
+}
+tbody td.volume {
+    background:#f9f9f9;
+}
+/* ################ FORM ################ */
+.form-input input,
+.form-input.textline input,
+.form-elem.textline input,
+.form-elem.select select,
+.form-elem.textarea textarea {
+	border-width: 1px;
+	border-style: solid;
+	border-bottom-color: #DDDDDD;
+	border-left-color: #C3C3C3;
+	border-top-color: #7C7C7C;
+	border-right-color: #C3C3C3;
+	padding: 1px;
+}
+.submitbutton input {
+    color: #333333;
+	border: 1px #6e9542 solid;
+	background: #92E434 url(/images/button_green_3d.gif) repeat-x center top;
+    font-weight: bold;
+}
+
+.regFlow .submitbutton input {
+    margin: 0;
+    height: 2.6em;
+    border: 0;
+}
+
+.regFlow .nextButton {
+	background: url(/images/button_green_left.gif) 0 50% no-repeat;
+}
+.regFlow .submitbutton input.nextButton {
+	background: url(/images/button_green_right.gif) 100% 50% no-repeat;
+	padding-left:1em;
+	padding-right:2.5em;
+	height: 2.5em;
+}
+.regFlow .backButton {
+	background: url(/images/button_grey_right.gif) 100% 50% no-repeat;
+}
+.regFlow .submitbutton input.backButton {
+	background: url(/images/button_grey_left.gif) 0% 50% no-repeat;
+	padding-left:2.5em;
+	padding-right:1em;
+	height: 2.5em;
+}
+
+input.disabled {
+    color: #777777;
+	border: 1px #6e9542 solid;
+	background: #92E434 repeat-x center top;
+    font-weight: bold;
+}
+
+#loginbox .submitbutton input {
+    color: #333333;
+	border: 1px #e3e3e3 solid;
+	background: #E3E3E3 url(/images/verlauf_25.jpg) repeat-x center top;
+    font-weight: bold;
+}
+.form-field.error {
+    padding-bottom: 0.3125em; /* 5/16 */
+    color: #c00;
+}
+.submitbutton input {
+    cursor: pointer;
+}
+.submitbutton a {
+    text-decoration: none;
+}
+.form-elem.radio .radiobuttons_button {
+	float: left;
+	padding-left:0.5em;
+}
+/* ################ ERROR ################ */
+div.box-wrapper.error {
+    border-color: #c00;
+    font-weight: bold;
+}
+div.box-wrapper.error ul {
+    list-style: disc;
+    margin-left: 1em; /* 0 0 0 10/10 */
+}
+span.error {
+	color: #c00;
+}

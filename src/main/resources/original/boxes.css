@@ -1,0 +1,270 @@
+/* ################ BOXES ################ */
+#loginbox p:after,
+.box-inner:after,
+table tbody td:after,
+#loginbox form fieldset p:after,
+#profile .profile-wrapper:after,
+#profile #offer-conditions:after,
+#profile-nav:after,
+#offer-history .section:after,
+.tabnav:after,
+form fieldset p:after {
+    display: block;
+    clear: both;
+    content: " ";
+}
+.box-wrapper ul {
+    list-style: none;
+    margin-left: 0;
+}
+
+/* ################ FREUNDE WERBEN BOX ################ */
+#canvass_friends_box a {
+	text-decoration: none;
+}
+
+#canvass_friends_box .first_line {
+	color: #333333;
+	margin-left: .5em;
+	margin-top: -3.3em;
+	text-decoration: none;
+}
+#canvass_friends_box .second_line {
+	margin-left: 0.5em;
+	margin-top: -0.6em;
+	text-decoration: none;
+}
+/* we need this because some browsers ignore the #canvass_friends_box a { above */
+#canvass_friends_box h3.first_line {
+	text-decoration: none;
+	color:#333333;
+	font-size:2em;
+	font-weight:bold;
+	margin-left:0.6em;
+	text-align:left;
+	width:11em;
+}
+#canvass_friends_box h3.second_line {
+	text-decoration: none;
+        color: #6cc02e;
+	font-size:2em;
+	font-weight:bold;
+	margin-left:0.6em;
+	text-align:left;
+	width:11em;
+}
+
+/* ################ Kunden WERBEN BOX ################ */
+#canvass_customer_box {
+	/* other margin boxes have a bottom margin, becaus of our money pic we need to mak it smaller */
+	margin-top: -1.6em;
+	height: 10.3em;
+	margin-bottom: 3.5em;
+}
+#canvass_customer_box a {
+	text-decoration: none;
+}
+#canvass_customer_box h1 {
+	color:#333333;
+	font-size:1.6em;
+	font-weight:bold;
+	margin-left:0.6em;
+	text-align:center;
+	width:11em;
+}
+#canvass_customer_box .first_line {
+	margin-top: -4.2em;
+	text-decoration: none;
+}
+#canvass_customer_box .second_line {
+	margin-top: -0.4em;
+	text-decoration: none;
+}
+/* we need this because some browsers ignore the #canvass_friends_box a { above */
+#canvass_customer_box h1.first_line {
+	text-decoration: none;
+}
+#canvass_customer_box h1.second_line {
+	text-decoration: none;
+}
+
+/* ################ DIREKT Kredit BOX ################ */
+#direct_credit_box {
+	margin-bottom: 4em;
+}
+
+#direct_credit_box #body_box {
+
+}
+#direct_credit_box #image_box {
+	z-index: 1;
+	width: 32.5em;
+	height: 25.2em;
+	position:relative;
+}
+#direct_credit_box #direct_credit_amountBox  {
+	position: absolute;
+	z-index: 2;
+	left: 1em;
+	top: 8.5em;
+
+}
+#direct_credit_box #direct_credit_amountBox SELECT {
+	border-color: #8CCE38 #88CF33 #89CF3B #89CE33;
+	border-style:solid;
+	border-width:1px;
+	color:#515151;
+	min-width: 9.5em;
+	width: 9.5em;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+#direct_credit_box #direct_credit_submit_button_text {
+	position: absolute;
+	z-index: 2;
+	left:1em;
+	top:12.8em;
+}
+
+#direct_credit_box #direct_credit_submit_button_text input {
+	background:url("/images/1px_trans.gif") repeat scroll 0 0 transparent;
+	font-size:200%;
+	font-weight:bold;
+	height:45px;
+	width:190px;
+	cursor: pointer;
+	border:medium none;
+}
+/* ################ BECOME LENDER BOX ################ */
+
+#become_lender_box {
+	margin-bottom: 2em;
+}
+
+#become_lender_box  #image_box {
+	z-index: 1;
+	width: 32.5em;
+	height: 25.2em;
+	position:relative;
+}
+
+#become_lender_box  #become_lender_submit_button_text {
+	position: absolute;
+	z-index: 2;
+	left:1em;
+	top:10.3em;
+}
+
+#become_lender_box  #become_lender_submit_button_text INPUT {
+	background:url("/images/1px_trans.gif") repeat scroll 0 0 transparent;
+	font-size:200%;
+	font-weight:bold;
+	height:45px;
+	width:190px;
+	cursor: pointer;
+	border:medium none;
+}
+/* ################ DIREKT PRINZIP BOX ################ */
+#direct_principle_box {
+	width: 97.8em;
+	height: 33.4em;
+	border: .1em solid #B2B2B2;
+	float: left;
+}
+
+#direct_principle_box #headline_box {
+	background-color: #B2B2B2;
+	width: 97.8em;
+}
+#headline {
+	color: #FFFFFF;
+	font-size: 180%;
+	padding: 0.2em 0 0.2em 2em;
+}
+
+#direct_principle_box #image_box {
+	position:absolute;
+	z-index: 1;
+	margin-top: 0.4em;
+}
+
+#direct_principle_box .pos_abs {
+	position: absolute;
+	z-index: 2;
+}
+
+#direct_principle_box .direct_box_user {
+	font-size: 160%;
+	font-weight: bold;
+	padding-bottom: 0em;
+	margin-top: 1em;
+	width: 20em;
+	text-align: center;
+}
+#direct_principle_box .direct_box_text {
+	font-size: 150%;
+	font-weight: bold;
+	padding-bottom: 0em;
+	text-align: center;
+}
+
+#direct_principle_box #direct_borrower {
+	margin-left: 0;
+}
+#direct_principle_box #direct_lender {
+	margin-left: 41em;
+}
+#direct_principle_box .arrow_box {
+	height:3.5em;
+	width:13em;
+}
+
+
+#direct_principle_box #direct_first_line_left {
+	margin-left:12em;
+	margin-top:8.2em;
+	text-align: left;
+}
+#direct_principle_box #direct_second_line_left {
+	margin-left:13em;
+	margin-top:13em;
+	color: #FFFFFF;
+}
+#direct_principle_box #direct_text_direct_credit {
+	font-size:250%;
+	font-weight:bold;
+	height:1em;
+	margin-left:14.5em;
+	margin-top:5.1em;
+	padding-bottom:0;
+	text-align:center;
+	width:10em;
+}
+#direct_principle_box #direct_explination_direct_credit {
+	font-size:150%;
+	height:7em;
+	margin-left:23.1em;
+	margin-top:11.2em;
+	text-align:center;
+	width:20em;
+}
+#direct_principle_box #direct_first_line_right {
+	color: #FFFFFF;
+	margin-top: 8.9em;
+	margin-left: 40em;
+}
+
+#direct_principle_box #direct_second_line_right {
+	margin-left:42em;
+	margin-top:13em;
+}
+
+
+/* ################ TABBED BOX FOR FORMS ################ */
+.tab-box .box-inner .box-inner {
+    border: none;
+}
+.tab-box .form-handle .submitbutton {
+    float: right;
+}

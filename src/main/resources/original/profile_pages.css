@@ -1,0 +1,181 @@
+/* ################## PROFILE PAGES (CREDIT+MEMBER+GROUP) ########################*/
+#profile dl,
+#profile ul {
+        font-size: 120%; /* 12/10 */
+}
+#profile dl {
+    margin-bottom: .5em;
+}
+#profile h1 {
+    color: black;
+}
+#profile h3 {
+    display: block;
+    margin: 0;
+}
+#profile .profile-wrapper h3 {
+    padding-bottom: .8em; /* 8/10 */
+    padding-top: 0px;
+    font-size: 120% /* 12/10 */
+}
+#profile .profile-wrapper h3:after {
+    clear:none;
+}
+#profile .profile-wrapper img {
+    float: left;
+    margin-right: 1em; /* 10/10 */
+    margin-bottom: 1em;
+}
+#profile .profile-wrapper div {
+    margin-left: 0px;
+    float:left;
+    width: 28em;
+}
+#profile .profile-wrapper dl dd {
+    display: block;
+    margin-left: 10em; /* 100/10 */
+    padding-bottom: 0.3em; /* 3/10 */
+}
+#profile .profile-wrapper dl dt {
+    float: left;
+}
+#profile .profile-wrapper .rating {
+    float:right;
+    border: 1px #e3e3e3 solid;
+    background-color: #fff;
+    text-align: center;
+    padding: 0.5em; /* 5/10 */
+    width: 8em; /* 80/10 */
+    margin-left:0;
+}
+#profile .profile-wrapper .rating b {
+    font-size: 240%; /* 24/10 */
+    display: block;
+}
+#profile #offer-conditions dd {
+    float: left;
+    width: 42.0%;
+}
+#offer-history .section dl dd {
+    float: left;
+    width: 47.0%;
+}
+#profile #offer-conditions dd.odd,
+#offer-history .section dl dd.odd {
+    float: left;
+    width: 40.0%;
+}
+#profile #offer-conditions dd span,
+#offer-history .section dl dd span {
+    display: block;
+    padding-left: 8em; /* 80/10 */
+}
+#profile #offer-conditions dd span {
+    font-weight: bold;
+    padding-bottom: 0.3em; /* 3/10 */
+}
+#profile #offer-conditions dd span span,
+#offer-history .section dl dd span span {
+    padding: 0;
+    margin-left: -8em;  /* 80/10 */
+    float: left;
+    font-weight: normal;
+}
+#profile-nav li {
+    float: left;
+    margin-right: 2em; /* 20/10 */
+}
+#profile form fieldset {
+    padding-bottom: 0;
+    border: 0;
+}
+#profile form p {
+    float: left;
+    width: 30%;
+}
+#profile form p input,
+#profile form p select {
+    vertical-align: middle;
+}
+#profile h3 .info {
+    padding: 0;
+    font-weight: normal;
+}
+/* PROGRESS BAR */
+.progress {  /* id */
+	 /* background-color: #c1c1c1; */
+	 width: 5.5em; /* 55/10 */
+	 height: 1.1em; /* 11/10 */
+	 background: transparent url(/images/progress_empty.gif) repeat-x;
+	 margin: 0 auto;
+}
+#profile .progress {
+	width: 11em; /* 110/10 */
+    height: 1.1em; /* 11/10 */
+    margin-right: 0.5em; /* 5/10 */
+    /*position: absolute;*/
+    float:left;
+}
+.progress .filled-part,
+.progress open-part {
+    padding: 0;
+    margin: 0;
+    height: 1.1em; /* 11/10 */
+    text-align: left;
+}
+.progress .filled-part.bg {
+    margin: 0;
+    padding: 0;
+	/* background-color: #73be1e */
+	background: transparent url(/images/progress_full.gif) repeat-x;
+    float: left;
+}
+.progress .open-part.bg {
+    margin: 0;
+    padding: 0;
+}
+.progress .content {
+    margin:0;
+    margin-left: 11em; /* 110/10 */
+    padding: 0;
+    /*float:left;*/
+    position: absolute;
+    /*text-align: right;*/
+}
+/* OFFER HISTORY - also used in boxes in my smava */
+#offer-history .section {
+    padding-left: 11em; /* 110/10 */
+}
+#offer-history .section img {
+    float: left;
+    margin-left: -11em; /* 110/10 */
+}
+#offer-history .section {
+    /*margin-top: 10px*/
+}
+/* EXPIRED */
+.expired {
+    color: #888;
+}
+.disclaimer {
+    color: #999;
+    font-size: 90%; /* 9/10 */
+    padding-bottom: 0.5em; /* 5/10 */
+    text-align: right;
+}
+/* make side boxes look like content profile box on show_order.jsp */
+
+#borrowerbox, #ratingbox{
+	float: left;
+	width: 323px;
+}
+
+#ratingbox h5 span,
+#borrowerbox h5 span {
+    color: #fff;
+    background-color: #999999;
+}
+#ratingbox .box-wrapper,
+#borrowerbox .box-wrapper {
+    border: 1px solid #999999;
+}

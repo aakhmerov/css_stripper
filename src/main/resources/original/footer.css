@@ -1,0 +1,96 @@
+/* ################ FOOTER ################ */
+#footer {
+    margin-top: 1.25em; /* 20/16 */
+	padding-top: 1.25em; /* 20/16 */
+
+}
+#footer .inner {
+    padding: 0.3125em 1.25em; /* 5 20/16 */
+}
+#footer a {
+
+    margin:0;
+    padding:0;
+}
+#footer p {
+	padding: 0;
+	margin: 0;
+    font-size:75%; /* 12/16 */
+}
+#footer .footer-column, #compact_footer .footer-column {
+	float: left;
+	width: 8.2em;
+	height: 10em;
+	clear: none;
+	margin-bottom: 0.6250em; /* 10/16 */
+}
+
+/* ############### COMPACT FOOTER ################## */
+#compact_footer {
+	background: url(/images/divider_green.gif) repeat-x top center;
+	font-size: 62.5%;
+	width: 98em;
+	clear: both;
+}
+#compact_footer .inner {
+	padding: 1em;
+	height: 11em;
+}
+#compact_footer_left, #compact_footer_middle, #compact_footer_right {
+	float: left;
+	clear: none;
+	width: 33.50em;
+}
+#compact_footer_left {
+width: 32.50em;
+}
+#compact_footer_middle {
+	width: 25.50em;
+	padding-left: 6em;
+}
+#compact_footer_right {
+	width: 27.40em;
+	padding-left: 3em;
+}
+#compact_footer img {
+	float:left;
+	margin-top: 2em;
+
+}
+#compact_footer p {
+	font-weight: bold;
+	font-size: 120%;
+	color: #666;
+	margin-top: 3.33em; /*40px/12px*/
+}
+
+#compact_footer_right img {
+	margin-right: .7em;
+	margin-bottom: 1em;
+}
+#compact_footer p.ask_us_paid, #compact_footer p.ask_us_free  {
+	font-weight: normal;
+	padding-bottom: 0.3em;
+	margin-top: 1.5em;
+}
+#compact_footer_right .greybutton {
+	text-align: center;
+	background: #DADADA url(/images/verlauf_35.gif) repeat-x center top;
+}
+#compact_footer_right .greybutton p a {
+	color: #0000CC;
+	text-decoration: underline;
+}
+#compact_footer .compact_call {
+	color: #696969;
+	font-size: 230%;
+	font-weight: bold;
+	padding-bottom: 0;
+	margin-top: 0;
+}
+#compact_footer_right p.compact_call_info, #compact_footer p.office_hours {
+	color: #999;
+	font-size: 110%;
+	margin-top: 0.2em;
+	font-weight: normal;
+}
