@@ -48,6 +48,7 @@ public class Stripper {
         CascadingStyleSheet resultingCss = new CascadingStyleSheet();
         for (ICSSTopLevelRule rule : aCSS.getAllRules()) {
             String original = ((CSSStyleRule) rule).getSelectorsAsCSSString(new CSSWriterSettings(CSS_VERSION),0);
+//          replace all whitespaces and chars like \t, \n from selector signature
             String clean = original.replaceAll("\\s+","");
             if (!analyzedSelectors.contains(clean)){
                 resultingCss.addRule(rule);
@@ -77,6 +78,7 @@ public class Stripper {
             String toPush = r.readLine();
 
             while (toPush != null) {
+//          replace all whitespaces and chars like \t, \n from selector signature
                 toPush = toPush.replaceAll("\\s+","");
                 result.add(toPush);
                 toPush = r.readLine();
