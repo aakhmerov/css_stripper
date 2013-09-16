@@ -47,11 +47,12 @@ public class Stripper {
 
         CascadingStyleSheet resultingCss = new CascadingStyleSheet();
         for (ICSSTopLevelRule rule : aCSS.getAllRules()) {
-            if (rule instanceof CSSStyleRule) {
-                if (!analyzedSelectors.contains(((CSSStyleRule) rule).getSelectorsAsCSSString(new CSSWriterSettings(CSS_VERSION),0))){
-                    resultingCss.addRule(rule);
-                }
+            String original = ((CSSStyleRule) rule).getSelectorsAsCSSString(new CSSWriterSettings(CSS_VERSION),0);
+            String clean = original.replaceAll("\\s+","");
+            if (!analyzedSelectors.contains(clean)){
+                resultingCss.addRule(rule);
             }
+
         }
         CSSWriter writer = new CSSWriter(CSS_VERSION);
         try {
@@ -76,6 +77,7 @@ public class Stripper {
             String toPush = r.readLine();
 
             while (toPush != null) {
+                toPush = toPush.replaceAll("\\s+","");
                 result.add(toPush);
                 toPush = r.readLine();
             }

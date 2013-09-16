@@ -1,6 +1,5 @@
 package de.smava.css.stripper;
 
-import org.apache.commons.io.Charsets;
 import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,7 +7,6 @@ import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.io.FilenameFilter;
 import java.io.IOException;
-import java.nio.charset.Charset;
 
 /**
  * Created with IntelliJ IDEA.
@@ -75,12 +73,14 @@ public class Main {
                     }
                 };
                 File[] matchingAnalysisFiles = analysisFolder.listFiles(filter);
+
+//
                 if (matchingAnalysisFiles == null || matchingAnalysisFiles.length != 1) {
                     logger.error("Matching analysis files should be mappable 1 to 1 with original");
                     logger.error("Current matches : [" + matchingAnalysisFiles + "]");
                 } else {
                     File analysis = matchingAnalysisFiles[0];
-                    File destination = new File (outputFolder.getAbsolutePath() + "/" + original.getName() + OUT_SUFFIX);
+                    File destination = new File (outputFolder.getAbsolutePath() + "/" + original.getName().split("\\.")[0] + OUT_SUFFIX);
                     StringBuffer data = null;
                     try {
                         data = stripper.strip(FileUtils.readFileToString(original),FileUtils.readFileToString(analysis));
