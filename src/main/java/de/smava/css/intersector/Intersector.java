@@ -81,9 +81,9 @@ public class Intersector {
         			if(cssDeclarationsComparator.compare(ruleCSSA, ruleCSSB) == 0) {
         				intersectedCSS.addRule(ruleCSSA);
         			}
-        			// otherwise pull out common declarations and placed them to intersected/${file_name}_intersected.css,
-        			// rest of declarations put accordingly to differences_a/${file_name}.css and differences_b/${file_name}.css
         			else {
+        				// otherwise pull out common declarations and placed them to intersected/${file_name}_intersected.css,
+        				// rest of declarations put accordingly to differences_a/${file_name}.css and differences_b/${file_name}.css
         				Map<IntersectDataType, ICSSTopLevelRule> cssDeclarationsMerge = this.cssDeclarationsMerge(ruleCSSA, ruleCSSB);
         				intersectedCSS.addRule(cssDeclarationsMerge.get(IntersectDataType.INTERSECTED));
         				differenceACSS.addRule(cssDeclarationsMerge.get(IntersectDataType.DIFFERENCE_A));
@@ -105,7 +105,6 @@ public class Intersector {
         	
         	
         	for(CSSSelector cssSelectorA : ((CSSStyleRule) ruleCSSA).getAllSelectors()) {
-        		LOGGER.debug("");
         		LOGGER.debug("\t" + cssSelectorA.getAsCSSString(new CSSWriterSettings(CSS_VERSION), 0));
         	}
         	
@@ -126,8 +125,12 @@ public class Intersector {
     	}
         
         CSSWriter cssIntersectedWriter = new CSSWriter(CSS_VERSION);
+        try {
         	cssIntersectedWriter.setHeaderText("");
         	intersected.append(cssIntersectedWriter.getCSSAsString(intersectedCSS));
+        } catch (Exception e) {
+        	LOGGER.error("Can't write resulting differenceACSS CSS to intersected!", e);
+        }
         
         CSSWriter cssDifferenceAWriter = new CSSWriter(CSS_VERSION);
         try {
