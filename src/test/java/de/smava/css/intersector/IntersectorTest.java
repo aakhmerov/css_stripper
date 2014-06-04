@@ -1,11 +1,14 @@
 package de.smava.css.intersector;
 
 import com.phloc.css.ECSSVersion;
+import com.phloc.css.ICSSWriterSettings;
 import com.phloc.css.decl.CSSStyleRule;
 import com.phloc.css.decl.CascadingStyleSheet;
 import com.phloc.css.decl.ICSSTopLevelRule;
 import com.phloc.css.reader.CSSReader;
 import com.phloc.css.writer.CSSWriterSettings;
+
+import de.smava.css.intersector.comparators.CSSSelectorsComparator;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.Test;
@@ -39,15 +42,17 @@ public class IntersectorTest {
         File toIntersectA  = new File(ClassLoader.getSystemClassLoader().getResource("to_intersect_a.css").getFile());
         File toIntersectB  = new File(ClassLoader.getSystemClassLoader().getResource("to_intersect_b.css").getFile());
         
+        ICSSWriterSettings settings = new CSSWriterSettings(CSS_VERSION);
+        
         Map<IntersectDataType, StringBuffer> intersectedData = intersectorToTest.intersect(FileUtils.readFileToString(toIntersectA), FileUtils.readFileToString(toIntersectB));
 
         String intersectedCSSString = intersectedData.get(IntersectDataType.INTERSECTED).toString();
         String differenceACSSString = intersectedData.get(IntersectDataType.DIFFERENCE_A).toString();
         String differenceBCSSString = intersectedData.get(IntersectDataType.DIFFERENCE_B).toString();
         
-        assertThat("intersected CSS is not empty", intersectedCSSString.isEmpty(),is(false));
-        assertThat("differenceA CSS is not empty", differenceACSSString.isEmpty(),is(false));
-        assertThat("differenceB CSS is not empty", differenceBCSSString.isEmpty(),is(false));
+        assertThat("intersected CSS is not empty", intersectedCSSString.isEmpty(), is(false));
+        assertThat("differenceA CSS is not empty", differenceACSSString.isEmpty(), is(false));
+        assertThat("differenceB CSS is not empty", differenceBCSSString.isEmpty(), is(false));
         
         CascadingStyleSheet cssToIntersectA = CSSReader.readFromString(FileUtils.readFileToString(toIntersectA), Charset.forName(CHARSET), CSS_VERSION);
         CascadingStyleSheet cssToIntersectB = CSSReader.readFromString(FileUtils.readFileToString(toIntersectB), Charset.forName(CHARSET), CSS_VERSION);
@@ -55,18 +60,78 @@ public class IntersectorTest {
         CascadingStyleSheet cssDifferenceA = CSSReader.readFromString(differenceACSSString, Charset.forName(CHARSET), CSS_VERSION);
         CascadingStyleSheet cssDifferenceB = CSSReader.readFromString(differenceBCSSString, Charset.forName(CHARSET), CSS_VERSION);
         
-//      ensure that all proper styles are still in the file
-        /*File proper = new File (ClassLoader.getSystemClassLoader().getResource("test_result.css").getFile());
-        CascadingStyleSheet aCSS = CSSReader.readFromString(FileUtils.readFileToString(proper), Charset.forName("UTF-8"), ECSSVersion.CSS30);
-        for (ICSSTopLevelRule rule : aCSS.getAllRules()) {
-            if (rule instanceof CSSStyleRule) {
-                line = ((CSSStyleRule) rule).getSelectorsAsCSSString(new CSSWriterSettings(ECSSVersion.CSS30),0);
-                assertThat("Stripped css contains selector : [" + line + "]",
-                        strippedString.contains(line),
-                        is(true)
-                );
-            }
-        }*/
+        // check if at least one CSS style sheet generated as a result of intersector contains rules selectors from CSS A
+        for (ICSSTopLevelRule cssToIntersectLevelRuleA : cssToIntersectA.getAllRules()) {
+        	assertThat("At least one CSS style sheet generated as a result of intersector contains rules selectors from CSS A : [" + ((CSSStyleRule) cssToIntersectLevelRuleA).getSelectorsAsCSSString(settings, 0) + "]",
+        			this.isIntersectedDataContainsRuleSelectors(cssIntersected, cssDifferenceA, cssDifferenceB, cssToIntersectLevelRuleA),
+        			is(true));
+		}
+        
+        // check if at least one CSS style sheet generated as a result of intersector contains rules selectors from CSS B
+        for (ICSSTopLevelRule cssToIntersectLevelRuleB : cssToIntersectB.getAllRules()) {
+        	assertThat("At least one CSS style sheet generated as a result of intersector contains rules selectors from CSS B : [" + ((CSSStyleRule) cssToIntersectLevelRuleB).getSelectorsAsCSSString(settings, 0) + "]",
+        			this.isIntersectedDataContainsRuleSelectors(cssIntersected, cssDifferenceA, cssDifferenceB, cssToIntersectLevelRuleB),
+        			is(true));
+		}
+    }
+    
+    @Test
+    public void testCSSDeclarationsMerge() {
+    	ICSSWriterSettings settings = new CSSWriterSettings(CSS_VERSION);
+    	
+    	CascadingStyleSheet cssRuleToMergeA = CSSReader.readFromString(".result .questions {"
+    			+ "color:#333;"
+    			+ "font-size:16px;"
+    			+ "font-weight:bold;"
+    			+ "margin-bottom:10px;"
+    			+ "}", Charset.forName(CHARSET), CSS_VERSION);
+        CascadingStyleSheet cssRuleToMergeB = CSSReader.readFromString(".result .questions {"
+    			+ "color:#333;"
+    			+ "font-size:18px;"
+    			+ "font-weight:bold;"
+    			+ "margin-bottom:10px;"
+    			+ "}", Charset.forName(CHARSET), CSS_VERSION);
+    	
+    	Map<IntersectDataType, ICSSTopLevelRule> cssDeclarationsMerge = intersectorToTest.cssDeclarationsMerge(cssRuleToMergeA.getRuleAtIndex(0), cssRuleToMergeB.getRuleAtIndex(0));
+    	assertThat("",
+    			((CSSStyleRule) (cssDeclarationsMerge.get(IntersectDataType.INTERSECTED))).getAllDeclarations().size() == 3,
+    			is(true));
+    	assertThat("",
+    			((CSSStyleRule) (cssDeclarationsMerge.get(IntersectDataType.DIFFERENCE_A))).getAllDeclarations().size() == 1,
+    			is(true));
+    	assertThat("",
+    			((CSSStyleRule) (cssDeclarationsMerge.get(IntersectDataType.DIFFERENCE_B))).getAllDeclarations().size() == 1,
+    			is(true));
+    	assertThat("",
+    			cssDeclarationsMerge.get(IntersectDataType.DIFFERENCE_A).getAsCSSString(settings, 0).contains("font-size:16px;"),
+    			is(true));
+    	assertThat("",
+    			cssDeclarationsMerge.get(IntersectDataType.DIFFERENCE_B).getAsCSSString(settings, 0).contains("font-size:18px;"),
+    			is(true));
     }
 
+    private boolean isIntersectedDataContainsRuleSelectors(CascadingStyleSheet cssIntersected, CascadingStyleSheet cssDifferenceA, CascadingStyleSheet cssDifferenceB, ICSSTopLevelRule topLevelRule) {
+    	CSSSelectorsComparator cssSelectorComparator = new CSSSelectorsComparator();
+    	
+    	for (ICSSTopLevelRule intersectedTopLevelRule : cssIntersected.getAllRules()) {
+    		if(cssSelectorComparator.compare(topLevelRule, intersectedTopLevelRule) == 0) {
+    			return true;
+    		}
+    	}
+    	
+    	for (ICSSTopLevelRule differenceATopLevelRule : cssDifferenceA.getAllRules()) {
+    		if(cssSelectorComparator.compare(topLevelRule, differenceATopLevelRule) == 0) {
+    			return true;
+    		}
+    	}
+    	
+    	for (ICSSTopLevelRule differenceBTopLevelRule : cssDifferenceB.getAllRules()) {
+    		if(cssSelectorComparator.compare(topLevelRule, differenceBTopLevelRule) == 0) {
+    			return true;
+    		}
+    	}
+    	
+    	return false;
+    }
+    
 }

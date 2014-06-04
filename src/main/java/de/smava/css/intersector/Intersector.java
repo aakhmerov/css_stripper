@@ -38,8 +38,8 @@ public class Intersector {
     
     /**
      * Intersect two CSS styles sets
-     * @param String toIntersectA CSS content to intersect
-     * @param String toIntersectB CSS content to intersect
+     * @param toIntersectA CSS content to intersect
+     * @param toIntersectB CSS content to intersect
      * @return Map<String key, StringBuffer CSScode> keys: intersected, differenceA, differenceB 
      */
     public Map<IntersectDataType, StringBuffer> intersect(String toIntersectA, String toIntersectB) {
@@ -156,11 +156,11 @@ public class Intersector {
     
     /**
      * Compare and merge declaration form given rule. Declaration are spited to three types: intersected, differenceA, differenceB
-     * @param ICSSTopLevelRule icssTopLevelRuleA rule A to compare and merge
-     * @param ICSSTopLevelRule icssTopLevelRuleB rule B to compare and merge
+     * @param icssTopLevelRuleA rule A to compare and merge
+     * @param icssTopLevelRuleB rule B to compare and merge
      * @return Map<IntersectDataType key, ICSSTopLevelRule rule> keys: intersected, differenceA, differenceB 
      */
-    private Map<IntersectDataType, ICSSTopLevelRule> cssDeclarationsMerge(ICSSTopLevelRule icssTopLevelRuleA, ICSSTopLevelRule icssTopLevelRuleB) {
+    public Map<IntersectDataType, ICSSTopLevelRule> cssDeclarationsMerge(ICSSTopLevelRule icssTopLevelRuleA, ICSSTopLevelRule icssTopLevelRuleB) {
     	Map<IntersectDataType, ICSSTopLevelRule> result =  new HashMap<IntersectDataType, ICSSTopLevelRule>();
     	
     	CSSStyleRule intersectedRule = new CSSStyleRule();
