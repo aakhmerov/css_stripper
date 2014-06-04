@@ -51,7 +51,6 @@ public class Intersector {
     	
         CascadingStyleSheet cssToIntersectA = CSSReader.readFromString(toIntersectA, Charset.forName(CHARSET), CSS_VERSION);
         CascadingStyleSheet cssToIntersectB = CSSReader.readFromString(toIntersectB, Charset.forName(CHARSET), CSS_VERSION);
-//        List<String> analyzedSelectors = listData(analyzedData);
         
         CascadingStyleSheet intersectedCSS = new CascadingStyleSheet();
         CascadingStyleSheet differenceACSS = new CascadingStyleSheet();
@@ -63,7 +62,7 @@ public class Intersector {
         CSSSelectorsComparator cssSelectorComparator = new CSSSelectorsComparator();
         CSSDeclarationsComparator cssDeclarationsComparator = new CSSDeclarationsComparator();
         
-        System.out.println("selectorsA:");
+        LOGGER.debug("selectorsA:");
         for (ICSSTopLevelRule ruleCSSA : allRulesA) {
         	int selectorAppearanceInRuleCSSB = 0;
         	
@@ -105,28 +104,20 @@ public class Intersector {
         	}
         	
         	
-        	// TODO delete displaying part
-        	// displaying
         	for(CSSSelector cssSelectorA : ((CSSStyleRule) ruleCSSA).getAllSelectors()) {
-        		System.out.println("\t" + cssSelectorA.getAsCSSString(new CSSWriterSettings(CSS_VERSION), 0));
+        		LOGGER.debug("");
+        		LOGGER.debug("\t" + cssSelectorA.getAsCSSString(new CSSWriterSettings(CSS_VERSION), 0));
         	}
         	
-//            String selectorsA = ((CSSStyleRule) rule).getSelectorsAsCSSString(new CSSWriterSettings(CSS_VERSION), 0);
-//            System.out.println("\t" + selectorsA);
             if(((CSSStyleRule) ruleCSSA).getAllDeclarations() != null && ((CSSStyleRule) ruleCSSA).getAllDeclarations().size() > 0) {
             	for(CSSDeclaration cssDeclarationA : ((CSSStyleRule) ruleCSSA).getAllDeclarations()) {
-            		System.out.println("\t\t" + cssDeclarationA.getAsCSSString(new CSSWriterSettings(CSS_VERSION), 0) /*+ " : " + cssDeclarationA.getExpression().getAsCSSString(new CSSWriterSettings(CSS_VERSION), 0)*/);
+            		LOGGER.debug("\t\t" + cssDeclarationA.getAsCSSString(new CSSWriterSettings(CSS_VERSION), 0) /*+ " : " + cssDeclarationA.getExpression().getAsCSSString(new CSSWriterSettings(CSS_VERSION), 0)*/);
             	}
             }
             else {
-            	System.out.println("\t\t-");
+            	LOGGER.debug("\t\t-");
             }
-//          replace all whitespaces and chars like \t, \n from selector signature
-           /* String clean = original.replaceAll("\\s+","");
-            if (!analyzedSelectors.contains(clean)){
-                resultingCss.addRule(rule);
-            }*/
-            System.out.println("");
+            LOGGER.debug("");
         }
         
         // move all rules which left in CSS B to differences_b/${file_name}.css
@@ -135,12 +126,8 @@ public class Intersector {
     	}
         
         CSSWriter cssIntersectedWriter = new CSSWriter(CSS_VERSION);
-        try {
         	cssIntersectedWriter.setHeaderText("");
         	intersected.append(cssIntersectedWriter.getCSSAsString(intersectedCSS));
-        } catch (Exception e) {
-        	LOGGER.error("Can't write resulting intersectedCSS CSS to intersected!", e);
-        }
         
         CSSWriter cssDifferenceAWriter = new CSSWriter(CSS_VERSION);
         try {
