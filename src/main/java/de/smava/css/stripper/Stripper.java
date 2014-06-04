@@ -59,7 +59,7 @@ public class Stripper {
         try {
             writer.setHeaderText("");
             result.append(writer.getCSSAsString(resultingCss));
-        } catch (IOException e) {
+        } catch (Exception e) {
             logger.error("cannot write resulting CSS", e);
         }
         return result;
@@ -123,7 +123,7 @@ public class Stripper {
      */
     private class SelectorComparator implements Comparator< ICSSTopLevelRule> {
 
-        @Override
+//        @Override
         public int compare(ICSSTopLevelRule o1, ICSSTopLevelRule o2) {
             int result = 1;
             if (o1 instanceof CSSStyleRule && o2 instanceof CSSStyleRule) {

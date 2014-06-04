@@ -63,7 +63,7 @@ public class Main {
             for (final File original : originalsFolder.listFiles()) {
 //              JDK 7 specific implementation - TODO: get rid of it
                 FilenameFilter filter = new FilenameFilter() {
-                    @Override
+//                    @Override
                     public boolean accept(File dir, String name) {
                         boolean result = false;
                         if (name.startsWith(original.getName())) {
@@ -102,7 +102,7 @@ public class Main {
         logger.info("please provide path to the folder with proper structure as an argument");
         logger.info("folder structure : ");
         logger.info("./base");
-        logger.info("   ./original");
-        logger.info("   ./analysis");
+        logger.info("./original");
+        logger.info("./analysis");
     }
 }
