@@ -52,10 +52,25 @@ public class Intersector {
 
         CSSSelectorsComparator cssSelectorComparator = new CSSSelectorsComparator();
         CSSDeclarationsComparator cssDeclarationsComparator = new CSSDeclarationsComparator();
+//      intersect imports
+        for (CSSImportRule importRule : cssToIntersectA.getAllImportRules()) {
+            if (cssToIntersectB.getAllImportRules().contains(importRule)) {
+                intersectedCSS.addImportRule(importRule);
+                cssToIntersectB.removeImportRule(importRule);
+            } else {
+                differenceACSS.addImportRule(importRule);
+            }
+        }
 
+        for (CSSImportRule importRule : cssToIntersectB.getAllImportRules()) {
+            differenceBCSS.addImportRule(importRule);
+        }
+
+//      intersect selectors and media rules
         for (ICSSTopLevelRule ruleCSSA : allRulesA) {
             int selectorAppearanceInRuleCSSB = 0;
 
+//          TODO: do we really have to do doublce cycle? hash map of rulesB should be enough
             for (ICSSTopLevelRule ruleCSSB : cssToIntersectB.getAllRules()) {
                 // search for adequate selector in B
                 if (cssSelectorComparator.compare(ruleCSSA, ruleCSSB) == 0) {
