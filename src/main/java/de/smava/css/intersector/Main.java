@@ -10,7 +10,12 @@ import java.io.IOException;
 import java.util.Map;
 
 /**
- * Intersect takes two sets (folders): oryginals_a, originals_b of CSS files and intersect them. As a result produce three folders with CSS files: intersected, differences_a, differences_b.
+ * Intersect takes two sets (folders):
+ * oryginals_a, originals_b of CSS files and intersect them.
+ * <p/>
+ * As a result produce three folders with CSS files:
+ * intersected, differences_a, differences_b.
+ * <p/>
  * Remember that all files from set_a must have theirs equivalent in name in set_b.
  *
  * @author Daniel Suszczynski

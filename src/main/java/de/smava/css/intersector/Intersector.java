@@ -53,7 +53,6 @@ public class Intersector {
         CSSSelectorsComparator cssSelectorComparator = new CSSSelectorsComparator();
         CSSDeclarationsComparator cssDeclarationsComparator = new CSSDeclarationsComparator();
 
-        LOGGER.debug("selectorsA:");
         for (ICSSTopLevelRule ruleCSSA : allRulesA) {
             int selectorAppearanceInRuleCSSB = 0;
 
@@ -93,19 +92,24 @@ public class Intersector {
                 differenceACSS.addRule(ruleCSSA);
             }
 
-
-            for (CSSSelector cssSelectorA : ((CSSStyleRule) ruleCSSA).getAllSelectors()) {
-                LOGGER.debug("\t" + cssSelectorA.getAsCSSString(new CSSWriterSettings(CSS_VERSION), 0));
-            }
-
-            if (((CSSStyleRule) ruleCSSA).getAllDeclarations() != null && ((CSSStyleRule) ruleCSSA).getAllDeclarations().size() > 0) {
-                for (CSSDeclaration cssDeclarationA : ((CSSStyleRule) ruleCSSA).getAllDeclarations()) {
-                    LOGGER.debug("\t\t" + cssDeclarationA.getAsCSSString(new CSSWriterSettings(CSS_VERSION), 0) /*+ " : " + cssDeclarationA.getExpression().getAsCSSString(new CSSWriterSettings(CSS_VERSION), 0)*/);
+//          TODO: fix ClassCastException: com.phloc.css.decl.CSSMediaRule cannot be cast to com.phloc.css.decl.CSSStyleRule
+            if (LOGGER.isTraceEnabled()) {
+                LOGGER.trace("selectorsA:");
+                for (CSSSelector cssSelectorA : ((CSSStyleRule) ruleCSSA).getAllSelectors()) {
+                    LOGGER.trace("\t" + cssSelectorA.getAsCSSString(new CSSWriterSettings(CSS_VERSION), 0));
                 }
-            } else {
-                LOGGER.debug("\t\t-");
+
+                if (((CSSStyleRule) ruleCSSA).getAllDeclarations() != null && ((CSSStyleRule) ruleCSSA).getAllDeclarations().size() > 0) {
+                    for (CSSDeclaration cssDeclarationA : ((CSSStyleRule) ruleCSSA).getAllDeclarations()) {
+                        LOGGER.trace("\t\t" + cssDeclarationA.getAsCSSString(new CSSWriterSettings(CSS_VERSION), 0) /*+ " : " + cssDeclarationA.getExpression().getAsCSSString(new CSSWriterSettings(CSS_VERSION), 0)*/);
+                    }
+                } else {
+                    LOGGER.trace("\t\t-");
+                }
+                LOGGER.trace("");
             }
-            LOGGER.debug("");
+
+
         }
 
         // move all rules which left in CSS B to differences_b/${file_name}.css
